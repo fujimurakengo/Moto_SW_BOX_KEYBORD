@@ -3,18 +3,12 @@
 //スイッチIOの番号指定
 #define PASSING 7
 #define HI_BEAM 5
-
 #define TURN_R  6
 #define TURN_L  4
 #define HORN    3
 
 
-#define PASSING_key 0
-#define HI_BEAM_key 1
-#define TURN_R_key  2
-#define TURN_L_key  3
-#define HORN_key    4//KEY_RETURN
-
+//関数のプロトタイプ宣言
 void key_send_bunki(void);
 
 
@@ -40,7 +34,8 @@ indicator_t indicator=CENTER;
 void setup() {
   // put your setup code here, to run once:
 
-
+//INPUT_PULLUPにすると指定したピンをgndに落とすことでpinがLOWになる
+//便利だよ
   pinMode(PASSING, INPUT_PULLUP);
   pinMode(HI_BEAM, INPUT_PULLUP);
   pinMode(TURN_R, INPUT_PULLUP);
